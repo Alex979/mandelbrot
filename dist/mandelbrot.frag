@@ -13,12 +13,12 @@ const int MAX_ITERATIONS = 10000;
 
 float mandelbrot(vec2 position, float limit) {
   float n = 0.0;
-  vec2 currentPosition = vec2(0.0, 0.0);
+  vec2 z = vec2(0.0, 0.0);
   for(int i = 0; i < MAX_ITERATIONS; i++) {
-    if((currentPosition.x * currentPosition.x) + (currentPosition.y * currentPosition.y) > 4.0 || n >= limit) {
+    if((z.x * z.x) + (z.y * z.y) > 4.0 || n >= limit) {
       return n;
     }
-    currentPosition = vec2(((currentPosition.x * currentPosition.x) - (currentPosition.y * currentPosition.y)) + position.x, (2.0 * currentPosition.x * currentPosition.y) + position.y);
+    z = vec2(((z.x * z.x) - (z.y * z.y)) + position.x, (2.0 * z.x * z.y) + position.y);
     n += 1.0;
   }
   return 1.0;

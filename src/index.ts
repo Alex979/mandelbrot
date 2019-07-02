@@ -20,7 +20,7 @@ let movement = new PIXI.Point();
 let zoomDirection = 0;
 let offset = new PIXI.Point();
 let moveSpeed = 0.5;
-let zoomSpeed = 1.05;
+let zoomSpeed = 1.025;
 
 // Load mandelbrot shader
 app.loader.add('shader', 'dist/mandelbrot.frag').load(onLoaded);
