@@ -23,7 +23,7 @@ let moveSpeed = 0.5;
 let zoomSpeed = 1.05;
 
 // Load mandelbrot shader
-app.loader.add('shader', 'mandelbrot.frag').load(onLoaded);
+app.loader.add('shader', 'dist/mandelbrot.frag').load(onLoaded);
 
 // Add event listeners for window resize and user input
 window.addEventListener('resize', onResize);
